@@ -1,0 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package balance;
+
+/**
+ *
+ * @author Revy
+ */
+import java.util.*;
+public class Balance {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input= new Scanner(System.in); //The scanner function takes inputs
+        
+        System.out.println("Please enter your Checking Account Balance : ");//input of the checking account balnce
+        int accountBalance =input.nextInt();
+        System.out.println("Please enter your Savings Account Balance : "); //input of the saving account balance
+        int savingsAccounts =input.nextInt();
+        
+        if (accountBalance < 10)//IF statment with the checking account balance
+            System.out.println("Checking account balance is low!");//if the vaule is lower than 10 
+        
+        if (savingsAccounts < 100)//IF statment of the saving account balance
+            System.out.println("Savings account balance is low!");//If the vaule is lower than 100
+    }
+    
+}
