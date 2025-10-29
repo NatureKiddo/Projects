@@ -1,0 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package searchlist;
+
+/**
+ *
+ * @author Revy
+ */
+import javax.swing.*;
+public class SearchList {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        String[] deptName= {"Accounting", "Human Resources", "Sales"}; //My own data I inserted
+        String dept;
+        int x;
+        boolean deptWasFound = false;
+        dept = JOptionPane.showInputDialog(null, "Enter a department name");
+        for(x = 0; x < deptName.length; x++)
+            if (dept.equals(deptName[x]))
+                deptWasFound = true;
+        if(deptWasFound)
+            JOptionPane.showMessageDialog(null, dept + " was found in the list");
+        else
+            JOptionPane.showMessageDialog(null, dept + " was not found in the list");
+    }
+    
+}
