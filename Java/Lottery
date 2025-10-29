@@ -1,0 +1,61 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package lottery;
+
+/**
+ *
+ * @author Revy
+ */
+    import java.util.Scanner;
+import java.util.Random;
+
+public class Lottery {
+    public static void main(String[] args) {
+        // Create Scanner and Random objects
+        Scanner input = new Scanner(System.in);
+        Random rand = new Random();
+
+        // Generate random numbers for the lottery
+        int num1 = rand.nextInt(10);
+        int num2 = rand.nextInt(10);
+        int num3 = rand.nextInt(10);
+
+        // Get user's guesses
+        System.out.print("Please enter your first guess: ");
+        int guess1 = input.nextInt();
+        System.out.print("Please enter your second guess: ");
+        int guess2 = input.nextInt();
+        System.out.print("Please enter your third and final guess: ");
+        int guess3 = input.nextInt();
+
+        // Variable to store the number of correct guesses
+        int correctGuesses = 0;
+
+        // Check each guess against the corresponding random number
+        if (guess1 == num1) {
+            correctGuesses++;
+        }
+        if (guess2 == num2) {
+            correctGuesses++;
+        }
+        if (guess3 == num3) {
+            correctGuesses++;
+        }
+
+        // Print the user's guesses
+        System.out.println(guess1 + " " + guess2 + " " + guess3);
+
+        // Determine the prize based on the number of correct guesses
+        if (correctGuesses == 3) {
+            System.out.println("Congratulations! You won $10,000!");
+        } else if (correctGuesses == 2) {
+            System.out.println("Congratulations! You won $100!");
+        } else if (correctGuesses == 1) {
+            System.out.println("Congratulations! You won $10!");
+        } else {
+            System.out.println("You have won $0.");
+        }
+    }
+}
