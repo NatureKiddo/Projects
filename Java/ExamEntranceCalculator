@@ -1,0 +1,49 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package examentrancecalculator;
+
+/**
+ *
+ * @author Revy
+ */
+ import java.util.Scanner;
+public class ExamEntranceCalculator {
+
+    // Constants
+    private static final double Assesment_weight = 16.66;
+    private static final double Pass = 30.0;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get module name
+        System.out.print("Please enter the name of the module: ");
+        String moduleName = scanner.nextLine();
+
+        // Get formative assessment marks
+        System.out.print("Please enter the mark for Formative Assessment 1 (out of 100): ");
+        double fa1Mark = scanner.nextDouble();
+
+        System.out.print("Please enter the mark for Formative Assessment 2 (out of 100): ");
+        double fa2Mark = scanner.nextDouble();
+
+        System.out.print("Please enter the mark for Formative Assessment 3 (out of 100): ");
+        double fa3Mark = scanner.nextDouble();
+
+        // Calculate semester mark
+        double fa1WeightedMark = (fa1Mark / 100) * Assesment_weight;
+        double fa2WeightedMark = (fa2Mark / 100) * Assesment_weight;
+        double fa3WeightedMark = (fa3Mark / 100) * Assesment_weight;
+        double semesterMark = fa1WeightedMark + fa2WeightedMark + fa3WeightedMark;
+        System.out.print((int)semesterMark +"%");
+        // Check if the student has qualified
+        if (semesterMark >= Pass) {
+            System.out.println(" Congratulations! You have qualified to write the exam for module " + moduleName);
+        } else {
+            System.out.println( " You did not meet the qualifying criteria. You have failed module " + moduleName);
+        }
+        
+    }
+}
