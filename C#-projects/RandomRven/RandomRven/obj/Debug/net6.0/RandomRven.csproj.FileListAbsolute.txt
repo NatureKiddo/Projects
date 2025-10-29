@@ -1,0 +1,15 @@
+C:\Users\radon\source\repos\RandomRven\RandomRven\bin\Debug\net6.0\RandomRven.exe
+C:\Users\radon\source\repos\RandomRven\RandomRven\bin\Debug\net6.0\RandomRven.deps.json
+C:\Users\radon\source\repos\RandomRven\RandomRven\bin\Debug\net6.0\RandomRven.runtimeconfig.json
+C:\Users\radon\source\repos\RandomRven\RandomRven\bin\Debug\net6.0\RandomRven.dll
+C:\Users\radon\source\repos\RandomRven\RandomRven\bin\Debug\net6.0\RandomRven.pdb
+C:\Users\radon\source\repos\RandomRven\RandomRven\obj\Debug\net6.0\RandomRven.csproj.AssemblyReference.cache
+C:\Users\radon\source\repos\RandomRven\RandomRven\obj\Debug\net6.0\RandomRven.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\radon\source\repos\RandomRven\RandomRven\obj\Debug\net6.0\RandomRven.AssemblyInfoInputs.cache
+C:\Users\radon\source\repos\RandomRven\RandomRven\obj\Debug\net6.0\RandomRven.AssemblyInfo.cs
+C:\Users\radon\source\repos\RandomRven\RandomRven\obj\Debug\net6.0\RandomRven.csproj.CoreCompileInputs.cache
+C:\Users\radon\source\repos\RandomRven\RandomRven\obj\Debug\net6.0\RandomRven.dll
+C:\Users\radon\source\repos\RandomRven\RandomRven\obj\Debug\net6.0\refint\RandomRven.dll
+C:\Users\radon\source\repos\RandomRven\RandomRven\obj\Debug\net6.0\RandomRven.pdb
+C:\Users\radon\source\repos\RandomRven\RandomRven\obj\Debug\net6.0\RandomRven.genruntimeconfig.cache
+C:\Users\radon\source\repos\RandomRven\RandomRven\obj\Debug\net6.0\ref\RandomRven.dll

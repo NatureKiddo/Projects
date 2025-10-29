@@ -1,0 +1,15 @@
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\bin\Debug\net6.0\Rent&Buy.exe
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\bin\Debug\net6.0\Rent&Buy.deps.json
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\bin\Debug\net6.0\Rent&Buy.runtimeconfig.json
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\bin\Debug\net6.0\Rent&Buy.dll
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\bin\Debug\net6.0\Rent&Buy.pdb
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\obj\Debug\net6.0\Rent&Buy.csproj.AssemblyReference.cache
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\obj\Debug\net6.0\Rent&Buy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\obj\Debug\net6.0\Rent&Buy.AssemblyInfoInputs.cache
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\obj\Debug\net6.0\Rent&Buy.AssemblyInfo.cs
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\obj\Debug\net6.0\Rent&Buy.csproj.CoreCompileInputs.cache
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\obj\Debug\net6.0\Rent&Buy.dll
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\obj\Debug\net6.0\refint\Rent&Buy.dll
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\obj\Debug\net6.0\Rent&Buy.pdb
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\obj\Debug\net6.0\Rent&Buy.genruntimeconfig.cache
+C:\Users\Revy\source\repos\Rent&Buy\Rent&Buy\obj\Debug\net6.0\ref\Rent&Buy.dll

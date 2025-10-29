@@ -1,0 +1,10 @@
+C:\Users\radon\source\repos\StockManagementRven\StockManagementRven\bin\Debug\StockManagementRven.exe.config
+C:\Users\radon\source\repos\StockManagementRven\StockManagementRven\bin\Debug\StockManagementRven.exe
+C:\Users\radon\source\repos\StockManagementRven\StockManagementRven\bin\Debug\StockManagementRven.pdb
+C:\Users\radon\source\repos\StockManagementRven\StockManagementRven\obj\Debug\StockManagementRven.csproj.AssemblyReference.cache
+C:\Users\radon\source\repos\StockManagementRven\StockManagementRven\obj\Debug\StockManagementRven.Form1.resources
+C:\Users\radon\source\repos\StockManagementRven\StockManagementRven\obj\Debug\StockManagementRven.Properties.Resources.resources
+C:\Users\radon\source\repos\StockManagementRven\StockManagementRven\obj\Debug\StockManagementRven.csproj.GenerateResource.cache
+C:\Users\radon\source\repos\StockManagementRven\StockManagementRven\obj\Debug\StockManagementRven.csproj.CoreCompileInputs.cache
+C:\Users\radon\source\repos\StockManagementRven\StockManagementRven\obj\Debug\StockManagementRven.exe
+C:\Users\radon\source\repos\StockManagementRven\StockManagementRven\obj\Debug\StockManagementRven.pdb
