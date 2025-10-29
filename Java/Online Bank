@@ -1,0 +1,99 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package online.bank;
+
+/**
+ *
+ * @author Revy
+ */
+import java.util.Scanner; //import the Scanner 
+public class OnlineBank {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int balance; //the balance using the INT function
+        int withdraw; //the withdraw using the INT function
+        int deposit; //the deposit using the INT function
+        int save; //the save using the INT function
+        int duration;//the duration using INT function
+        balance = 1550; //assigning the balance with a values
+        
+        
+         Scanner input = new Scanner(System.in); //the Scanner function for the input
+         
+         
+         System.out.println("---------Welcome to CTU Online Banking---------"); //That start of the of progra with a Welcoming message
+         System.out.println("Enter the Account holders name: "); //The one who using the program name
+         String name= input.next(); //this is the input function to use for the name
+          System.out.println("Enter the Account holders surname: "); //The one who using the program surname
+         String surname= input.next(); //this is the input function to use for the surname
+         System.out.println("Enter the Account number: "); //The one who using the program account number
+         int acc = input.nextInt(); //this is the input function to use for the acc
+         System.out.println("\nYour current balance is R: " +balance); //The balance is assigned to the user
+         
+         
+         
+         
+         while(true)//loops the online bank options
+         {
+             System.out.println("\n-----What would you like to do at CTU Online Bank-----"); //Start of the bank
+             System.out.println("1. Display all account details"); //Shows the account information
+             System.out.println("2. Deposit the amount"); //Askes you if you want to deposit/put in more money into your account
+             System.out.println("3. Save the amount "); //The Save and Earn function with your interest 
+             System.out.println("4. Withdraw the amount");//Askes you if you want to withdraw/take out money from the bank
+             System.out.println("5. Exit");//Ends the program
+             System.out.println("------------------------------------------------------\n");
+             System.out.println("Choose option between 1 - 5.");//Options from the bank
+             int choice = input.nextInt();//input function
+             
+             switch(choice)
+             {//first option
+                 case 1: //account details (name and surname with teh account Number and the balance that has been assigned 
+                     System.out.println("Your account details:\n"+name+" "+surname+"\n\nAccount number: "+acc+
+                             "\nYour current balance: R"+balance);
+                     break;//
+                 case 2://second option
+                     System.out.println("\nWhat is the amount you would like to deposit: "); //deposit amount the user inputs
+                     deposit = input.nextInt();//INT Input
+                     balance = balance + deposit;//Balance and deposit calculating 
+                     System.out.println("The total amount is:  "+(balance));//view the balance
+                     break;
+                 case 3://third option
+                     System.out.println("\nEnter the amount you want save: ");//how much does the user wnt to save
+                     save = input.nextInt();//input values 
+                     System.out.println("Enter for how long you want save(Months): "); //how long does the user want ot save for
+                     duration = input.nextInt();//input value
+                     
+                     
+                     if(save<=500){ //if statemnt for the 100 - 500
+                        double rate = save * 0.05; //the save and the interest
+                        double amount = rate + duration; //the rate answer and the months 
+                         System.out.println("The final amount that you will save: " +(amount)); //final amount
+                     }
+                     else if(balance<600) { //if statment for the 600 - 1000
+                         double rate = save * 0.2; //the save and the interest
+                         double amount = rate + duration; //the rate answer and the months 
+                         System.out.println("The final amount that you will save: " +(amount)); //final amount
+                     }
+                     else if(balance>1000) { //if statment for over 1000
+                         double rate = save * 0.5; //the save and the interest
+                         double amount = rate + duration; //the rate answer and the months 
+                           System.out.println("The final amount that you will save: " +(amount)); //final amount
+                     }
+                     break;
+                 case 4://fouth option
+                     System.out.println("\nHow much do you want to withdraw:  "); //how much is the usser withdrawing
+                     withdraw = input.nextInt(); //input value
+                     balance = balance - withdraw; //balnce minus the withdraw function
+                     System.out.println("You have: R " +(balance)); //Final balance after the withdrawingg function
+                     break;
+                 case 5: //fifth option
+                     System.exit(0); //allows the program to stoop and quit the program
+                     break;//stops the case
+                }
+        }
+    }        
+}                         
