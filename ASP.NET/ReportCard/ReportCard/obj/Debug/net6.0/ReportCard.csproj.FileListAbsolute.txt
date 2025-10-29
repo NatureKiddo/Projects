@@ -1,0 +1,29 @@
+C:\Users\Revy\source\repos\ReportCard\ReportCard\bin\Debug\net6.0\ReportCard.exe
+C:\Users\Revy\source\repos\ReportCard\ReportCard\bin\Debug\net6.0\ReportCard.deps.json
+C:\Users\Revy\source\repos\ReportCard\ReportCard\bin\Debug\net6.0\ReportCard.runtimeconfig.json
+C:\Users\Revy\source\repos\ReportCard\ReportCard\bin\Debug\net6.0\ReportCard.dll
+C:\Users\Revy\source\repos\ReportCard\ReportCard\bin\Debug\net6.0\ReportCard.pdb
+C:\Users\Revy\source\repos\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.csproj.AssemblyReference.cache
+C:\Users\Revy\source\repos\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Revy\source\repos\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.AssemblyInfoInputs.cache
+C:\Users\Revy\source\repos\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.AssemblyInfo.cs
+C:\Users\Revy\source\repos\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.csproj.CoreCompileInputs.cache
+C:\Users\Revy\source\repos\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.dll
+C:\Users\Revy\source\repos\ReportCard\ReportCard\obj\Debug\net6.0\refint\ReportCard.dll
+C:\Users\Revy\source\repos\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.pdb
+C:\Users\Revy\source\repos\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.genruntimeconfig.cache
+C:\Users\Revy\source\repos\ReportCard\ReportCard\obj\Debug\net6.0\ref\ReportCard.dll
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\bin\Debug\net6.0\ReportCard.exe
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\bin\Debug\net6.0\ReportCard.deps.json
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\bin\Debug\net6.0\ReportCard.runtimeconfig.json
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\bin\Debug\net6.0\ReportCard.dll
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\bin\Debug\net6.0\ReportCard.pdb
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.AssemblyInfoInputs.cache
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.AssemblyInfo.cs
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.csproj.CoreCompileInputs.cache
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.dll
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\obj\Debug\net6.0\refint\ReportCard.dll
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.pdb
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\obj\Debug\net6.0\ReportCard.genruntimeconfig.cache
+C:\Users\Revy\source\repos\Chapter 5 + 7 (Rven)\ReportCard\ReportCard\obj\Debug\net6.0\ref\ReportCard.dll
