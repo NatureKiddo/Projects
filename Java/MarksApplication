@@ -1,0 +1,183 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package marksapplication;
+
+/**
+ * @author Revy
+ */
+public class MarksApplication {
+    
+// These are the instance variables for MarksApplication
+private String courseName; // The name of the course
+private String[][] marks; // A 2D array of marks for each student in the course
+
+// This is the constructor method for MarksApplication
+public MarksApplication(String courseName, String[][] marks) {
+    this.courseName = courseName;
+    this.marks = marks;
+}
+
+// Getter method for courseName
+public String getCourseName() {
+    return courseName;
+}
+
+// Setter method for courseName
+public void setCourseName(String courseName) {
+    this.courseName = courseName;
+}
+
+// Getter method for marks
+public String[][] getMarks() {
+    return marks;
+}
+
+// Setter method for marks
+public void setMarks(String[][] marks) {
+    this.marks = marks;
+}
+
+// Method to calculate the average mark for each student in the course
+public double[] getAverageMarks() {
+    double[] averages = new double[marks.length]; // Create a new array to store the averages
+    // Loop through each student's marks
+    for (int i = 0; i < marks.length; i++) {
+        int sum = 0; // Initialize the sum to 0
+        int count = 0; // Initialize the count to 0
+        // Loop through each mark for the current student
+        for (int j = 1; j < marks[i].length; j++) {
+            sum += Integer.parseInt(marks[i][j]); // Add the mark to the sum
+            count++; // Increment the count
+        }
+        averages[i] = (double) sum / count; // Calculate the average and add it to the averages array
+    }
+    return averages; // Return the averages array
+}
+
+// Method to display each student's marks and average
+public void displayStudentMarksAndAverages() {
+    double[] averages = getAverageMarks(); // Get the average marks for each student
+    System.out.println("\nThe marks are: ");
+    // Loop through each student's marks
+    for (int i = 0; i < marks.length; i++) {
+        System.out.print(marks[i][0] + ": "); // Print the student's name
+        // Loop through each mark for the current student
+        for (int j = 1; j < marks[i].length; j++) {
+            System.out.print(marks[i][j] + " "); // Print the mark
+        }
+        System.out.println("- Average: " + String.format("%.2f", averages[i])); // Print the average
+    }
+}
+
+// Method to get the minimum mark in the entire course
+public int getMinimumMark() {
+    int min = Integer.MAX_VALUE; // Initialize the minimum to the maximum value of an integer
+    // Loop through each student's marks
+    for (int i = 0; i < marks.length; i++) {
+        // Loop through each mark for the current student
+        for (int j = 1; j < marks[i].length; j++) {
+            int mark = Integer.parseInt(marks[i][j]); // Get the mark as an integer
+            if (mark < min) { // If the mark is less than the current minimum, set it as the new minimum
+                min = mark;
+            }
+        }
+    }
+    return min; // Return the minimum mark
+}
+
+// Method to get the maximum mark in the entire course
+public int getMaximumMark() {
+    int max = Integer.MIN_VALUE; // Initialize the maximum to the minimum value of an integer
+    // Loop through each student's marks
+    for (int i = 0; i < marks.length; i++) {
+        // Loop through each mark for the current student
+        for (int j = 1; j < marks[i].length; j++) {
+            int mark = Integer.parseInt(marks[i][j]); // Get the mark as an integer
+            if (mark > max) { // If the mark is greater than the current maximum, set it as the new maximum
+                max = mark;
+            }
+        }
+    }
+    return max; // Return the maximum mark
+}
+
+// Method to get the distribution of marks in the entire course
+public int[] getMarkDistribution() {
+    int[] distribution = new int[10]; // Create a new array to store the distribution of marks
+    // Loop through each student's marks
+    for (int i = 0; i < marks.length; i++) {
+        // Loop through each mark for the current student
+        for (int j = 1; j < marks[i].length; j++) {
+            int mark = Integer.parseInt(marks[i][j]); // Get the mark as an integer
+           
+
+if (mark >= 0 && mark <= 9) { // Check the mark range and increment the corresponding index of the distribution array
+distribution[0]++;
+} else if (mark >= 10 && mark <= 19) {
+distribution[1]++;
+} else if (mark >= 20 && mark <= 29) {
+distribution[2]++;
+} else if (mark >= 30 && mark <= 39) {
+distribution[3]++;
+} else if (mark >= 40 && mark <= 49) {
+distribution[4]++;
+} else if (mark >= 50 && mark <= 59) {
+distribution[5]++;
+} else if (mark >= 60 && mark <= 69) {
+distribution[6]++;
+} else if (mark >= 70 && mark <= 79) {
+distribution[7]++;
+} else if (mark >= 80 && mark <= 89) {
+distribution[8]++;
+} else if (mark >= 90 && mark <= 100) {
+distribution[9]++;
+}
+}
+}
+return distribution; // Return the final distribution array
+}
+
+public void generateMarkDistribution() {
+int[] distribution = getMarkDistribution(); // Get the distribution array
+System.out.println("\nMark Distribution: "); // Print header for mark distribution
+// Loop through the distribution array and print out the mark ranges and corresponding * symbols
+for (int i = 0; i < distribution.length; i++) {
+System.out.print(i + "0-" + i + "9: "); // Print the mark range
+for (int j = 0; j < distribution[i]; j++) {
+System.out.print("*"); // Print the corresponding * symbols
+}
+System.out.println(); 
+}
+}
+
+public static void main(String[] args) {
+    System.out.println("Welcome to CTU Marks"); // The welcome message 
+
+String[][] marks = { //The students marks which are given
+    {"Student 1", "87", "96", "70"},
+    {"Student 2", "68", "87", "90"},
+    {"Student 3", "94", "100", "90"},
+    {"Student 4", "100", "81", "82"},
+    {"Student 5", "83", "25", "85"},
+    {"Student 6", "78", "87", "65"},
+    {"Student 7", "85", "75", "83"},
+    {"Student 8", "91", "94", "100"},
+    {"Student 9", "76", "72", "40"},
+    {"Student 10", "87", "93", "73"}
+        
+     };
+
+MarksApplication marksApp = new MarksApplication("Beginner Java [JD521]", marks); //Course name
+
+System.out.println("Course Name: " + marksApp.getCourseName()); //Course name gets added
+
+marksApp.displayStudentMarksAndAverages(); //Displays the calculated average per student
+
+System.out.println("\nLowest mark in the mark application: " + marksApp.getMinimumMark()); //Lowest marks which a student has earned
+System.out.println("Highest mark in the mark application: " + marksApp.getMaximumMark()); //Highest marks which a student has earned
+
+marksApp.generateMarkDistribution(); //The marks distributio gets added or generated here
+}
+}
