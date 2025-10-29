@@ -1,0 +1,5 @@
+ID,Name,Category,Quantity,Price
+101,Apples,Fruit,80,0.50
+102,Shampoo,Toiletries,20,3.75
+103,Bread Loafs,Bakery,30,2.00
+
