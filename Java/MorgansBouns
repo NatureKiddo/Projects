@@ -1,0 +1,88 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package morgansbouns;
+
+/**
+ *
+ * @author Revy
+ */
+import java.util.*;
+public class MorgansBonus {
+
+    private static double bonus[][] = {
+
+{5,9,16,22,30},
+
+{10,12,18,24,36},
+
+{20,25,32,42,53},
+
+{32,38,45,55,68},
+
+{46,54,65,77,90},
+
+{60,72,84,96,120},
+
+{85,100,120,140,175}
+
+};
+
+public static void main(String[] args) {
+
+Scanner s = new Scanner(System.in);
+
+char choice = 'Y';
+
+// keep looping till user wants to calculate
+
+while(choice=='Y' || choice=='y') {
+
+// ask user for inputs
+
+System.out.print("Enter the positive reviews received: ");
+
+int reviews = Integer.parseInt(s.next());
+
+if(reviews < 0)
+
+throw new IllegalArgumentException();
+
+System.out.print("Enter the full weeks worked: ");
+
+int weeks = Integer.parseInt(s.next());
+
+if(weeks < 0)
+
+throw new IllegalArgumentException();
+
+// for 4 or more reviews rate is same
+
+if(reviews > 4) {
+
+reviews = 4;
+
+}
+
+// for 6 or more weeks rate is same
+
+if(weeks > 6) {
+
+weeks = 6;
+
+}
+
+System.out.println("The Bonus Amount is: " + bonus[weeks][reviews] + "\n");
+
+System.out.print("Do you want to calculate again(y/n): ");
+
+choice = s.next().charAt(0);
+
+}
+
+s.close();
+
+}
+
+}
