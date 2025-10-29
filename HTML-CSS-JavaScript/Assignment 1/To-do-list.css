@@ -1,0 +1,109 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif; 
+    margin: 20px; 
+    background-color: #f4f4f9; 
+}
+
+/* Main heading styling */
+h1 {
+    color: #333; 
+    text-align: center; 
+}
+
+/* Form styling */
+form {
+    margin-bottom: 20px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+}
+
+/* Input field styling */
+input {
+    padding: 10px; 
+    width: 300px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Button styling */
+button {
+    padding: 10px 15px; 
+    background-color: #28a745; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #218838; 
+}
+
+/* Filter buttons container */
+div {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+div button {
+    margin: 5px; /* Add spacing between buttons */
+}
+
+/* Highlight active filter button */
+button.active {
+    background-color: #007bff; 
+    color: white;
+}
+
+/* Unordered list styling */
+ul {
+    list-style-type: none; 
+    padding-left: 0;
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+/* List item styling */
+li {
+    padding: 10px; 
+    background-color: #f8f9fa; 
+    margin-bottom: 5px; 
+    border-radius: 4px; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* List item hover effect */
+li:hover {
+    background-color: #e2e6ea; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+    margin-right: 10px; 
+}
+
+/* Completed task styling */
+.completed {
+    text-decoration: line-through; 
+    color: gray; 
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 100%; 
+    }
+
+    ul {
+        max-width: 100%; 
+    }
+}

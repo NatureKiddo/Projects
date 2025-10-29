@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Elections Results</title><!--Title of the page-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script><!-- Importing Chart.js library for creating charts -->
+    <style>
+        /* Center-align the heading */
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>2025 Elections Results</h1><!-- Main heading of the page -->
+    <canvas id="electionPieChart" width="200" height="200"></canvas>
+
+    <script>
+        var ctx = document.getElementById('electionPieChart').getContext('2d');// Getting the context of the canvas element to draw the chart
+        // Creating a pie chart using Chart.js
+        var electionPieChart = new Chart(ctx, {
+            type: 'pie',    // Type of chart to be created (pie chart)
+            // Data for the pie chart
+            data: {
+                labels: ['DAD Party', 'CCC Party', 'PPP Party', 'MCD Party'],   // Labels for the pie chart segments
+
+                datasets: [{
+                    data: [45, 27, 5, 23],  // Data for the pie chart segments (percentage of votes)
+                    backgroundColor: ['#FF6384', '#36A2EB', '#90EE90', '#FFCE56']   // Colors for each segment of the pie chart
+                }]
+            },
+            options: {
+                responsive: true,   // Makes the chart responsive to window resizing
+                maintainAspectRatio: false  // Maintains the aspect ratio of the chart
+            }
+        });
+    </script>
+</body>
+</html>

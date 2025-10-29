@@ -1,0 +1,184 @@
+/* EcoSmart_Water_Bottle.css */
+
+/* Global styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styles, including text alignment */
+body {
+    text-align: center;
+}
+
+/* Navbar styles, fixed at the top of the page */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #343434;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Navbar list styles to center the links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+}
+
+/* Navbar link styles */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero section styles */
+.hero {
+    margin-top: 80px;
+    padding: 50px;
+    font-size: 27px;
+}
+
+/* Image in hero section, resizing it to fit */
+.hero img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+/* Button styles */
+button {
+    background: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Modal styles for the product customization window */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other content */
+
+}
+
+/* Modal Content */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+/* Label and Input Alignment */
+.modal-content label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.modal-content select,
+.modal-content input[type="checkbox"] {
+    margin-bottom: 10px;
+}
+
+/* Total Price Section */
+.modal-content p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: black; /* Green color for the total price */
+}
+
+/* Checkout Button */
+.modal-content button {
+    background: #27ae60;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+/* Checkout Button Hover Effect */
+.modal-content button:hover {
+    background: #1e8449; /* Darker green for hover effect */
+}
+
+/* Hidden class to hide the modal when not active */
+.hidden {
+    display: none;
+}
+
+/*Buy Now Button Hover Effect */
+button:hover {
+    background: #1e8449; /* Darker green for hover effect */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Adjust modal width for smaller screens */
+    }
+}
+
+/* Footer styles, including background and padding */
+footer {
+    background: #343434;
+    color: white;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+/* Contact form layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Input and textarea styles inside the form */
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+

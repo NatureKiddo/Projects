@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSmart Water Bottle</title>
+    <link rel="stylesheet" href="EcoSmart_Water_Bottle.css"> <!--CSS page-->
+    <script defer src="EcoSmart_Water_Bottle.js"></script> <!--JavaScript page-->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul> <!-- Navigation bar with links to different sections of the page -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="hero">
+            <h1>EcoSmart Water Bottle</h1> <!-- Main title of the page -->
+            <img src="waterbottle.jpg" alt="EcoSmart Water Bottle"> <!-- Image of the product -->
+            <br/>
+            <button id="buyNowBtn">Buy Now</button><!-- Button to trigger the modal for customization -->
+        </section>
+        <!-- Section for product features -->
+        <div id="modal" class="modal hidden" aria-hidden="true">
+            <div class="modal-content">
+                <span class="close-btn" aria-label="Close">&times;</span><!-- Close button for the modal -->
+                <h2>Customize Your Bottle</h2>
+                <label for="color">Choose Color:</label>
+                <select id="color">
+                    <option value="100.00">Blue - R100.00</option>
+                    <option value="105.00">Red - R105.00</option>
+                    <option value="100.00">Black - R100.00</option>
+                    <option value="110.00">Green - R110.00</option>
+                    <option value="110.00">Pink - R100.00</option>
+                    <option value="115.00">Purple - R115.00</option>
+                    <option value="110.00">Yellow - R110.00</option>
+                </select>
+                <br>
+                <label><!-- Label for the engraving options -->
+                    <input type="checkbox" class="engraving" value="5.00"> Small Butterfly Engraving (+R5.00)
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" class="engraving" value="5.00"> Small Bat Engraving (+R5.00)
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" class="engraving" value="10.00"> Large Flower Engraving (+R10.00)
+                </label>
+                <br>
+                <label>
+                    <br>
+                <p>Total Price: <span id="totalPrice">0.00</span></p><!--The Total Price-->
+                <button id="checkoutBtn">Checkout</button><!-- Button to trigger the checkout process -->
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <section id="contact"><!-- Contact section -->
+            <h2><font size="6">Contact Us</font></h2>
+        <br/>
+            <form id="contactForm"><!--Form of the contact page-->
+                <input type="text" id="name" placeholder="Your Name" required>
+
+                <input type="email" id="email" Placeholder="Your Email" required>
+
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                
+                <label><!-- Label for the terms and conditions checkbox -->
+                    <input type="checkbox" id="terms" required> Agree to <a href="https://www.gov.za/terms-and-conditions-use-0"><font color="blue">Terms and Conditions</font></a>
+                </label>
+                <button type="submit"><b><font size="3">Submit</font></b></button>
+            </form>
+        </section>
+    </footer>
+</body>
+</html>
