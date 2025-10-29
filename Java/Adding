@@ -1,0 +1,41 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package vrg_ex1;
+
+/**
+ *
+ * @author Revy
+ */
+// Java program to read data of various types using Scanner class
+import java.util.*;
+public class VRG_ex1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input= new Scanner(System.in);
+        
+try
+{
+    System.out.println("Please enter x: ");
+        
+        int x=input.nextInt();
+        System.out.println("Please enter y: ");
+        int y=input.nextInt();
+         System.out.println("Please enter name: ");
+        String name=input.next();
+       
+        System.out.println("Hi "+name+" the sum of "+x+" and "+y+" is "+(x+y));
+        }   catch(Exception ex) {
+            System.out.println("This is the error: "+ex);
+    
+}        
+        
+        
+        
+    }
+    
+}
