@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "Survey";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/survey_style.css" />
+</head>
+<body>
+    <div class="video-container">
+        <video src="~/Assets/balloons.mp4" autoplay muted loop></video> <!-- Video background code goes here -->
+    </div>
+    <header>
+        <div id="title"><h1>Event Feedback Form</h1></div>
+    </header>
+
+    <form id="survey-form">
+
+        <div id="description">Help us improve future events by providing your feedback</div><br>
+
+        <fieldset class="fieldset">
+
+            <div class="sub-group">
+                <label class="left" id="name-label" for="name">*Name:</label>
+                <input type="text" name="customer-name" class="right input-field" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="sub-group">
+                <label class="left" id="email-label" for="email">*Email:</label>
+                <input type="email" name="Email-address" class="right input-field" placeholder="Enter your email" id="email" required>
+            </div>
+
+            <div class="sub-group">
+                <label class="left" id="number-label" for="number">*Age:</label>
+                <input type="number" name="Age" placeholder="Age" min="1" max="100" class="right input-field" id="number">
+            </div>
+
+            <div class="sub-group">
+                <label class="left" id="handphone-label" for="handphone">*Phone Number:</label>
+
+                <input type="text" placeholder="Phone Number" class="right input-field" id="handphone">
+            </div>
+
+            <div class="sub-group">
+                <label class="left" for="dropdown">*How would you rate your overall event experience</label>
+
+                <select class="right dropdown" id="dropdown" name="dropdown">
+                    <option selected disabled>Select a rating</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+            <div class="sub-group">
+                <label class="left">
+                    *Which events did you attend?
+                </label>
+
+                <ul style="list-style: none;" class="right">
+
+                    <li class="checkbox"><label><input type="checkbox" name="game" value="music">Music Conference</label></li>
+                    <li class="checkbox"><label><input type="checkbox" name="game" value="workshop">Workshop</label></li>
+                    <li class="checkbox"><label><input type="checkbox" name="game" value="networking">Networking Session<label></li>
+
+                </ul>
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+            <div class="sub-group">
+                <label class="left" id="left-radio">Would you recommend our events to others?</label>
+
+                <ul style="list-style: none" class="right">
+                    <li class="radio"><label><input name="radio-buttons" value="1" type="radio" class="recommendation">Yes</label></li>
+                    <li class="radio"><label><input name="radio-buttons" value="2" type="radio" class="recommendation">Maybe</label></li>
+                    <li class="radio"><label><input name="radio-buttons" value="3" type="radio" class="recommendation">No</label></li>
+                </ul>
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+            <h2>Any additional comments or suggestions?</h2>
+
+            <div class="commentbox">
+
+                <textarea rows="4" placeholder="Enter your comment here..."></textarea>
+
+                <br></br>
+
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+    </div>
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Function to handle form submission
+        function handleFormSubmission(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Display a popup message
+            alert('Thank you! Your response has been received.');
+
+            // Reset the form fields
+            var form = document.getElementById('survey-form');
+            form.reset();
+
+            // Optionally, you can submit the form data to a server using AJAX here
+            // For simplicity, this example only shows the popup message and form reset
+        }
+
+        // Get the form element
+        var form = document.getElementById('survey-form');
+
+        // Attach the handleFormSubmission function to the form's submit event
+        form.addEventListener('submit', handleFormSubmission);
+    });
+</script>

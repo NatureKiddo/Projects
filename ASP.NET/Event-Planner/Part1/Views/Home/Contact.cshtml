@@ -1,0 +1,128 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-------------- Local Stylesheet Link -------------->
+    <link rel="stylesheet" href="~/Content/Contact_Style.css">
+    <!-------------- Font Awesome Link -------------->
+    <script src="https://kit.fontawesome.com/de270889e1.js" crossorigin="anonymous"></script>
+
+    <!-------------- AOS Link -------------->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+    <!-------------- Contact Section -------------->
+    <body>
+        <section id="contact">
+            <div class="heading-wrapper">
+                <div class="heading">
+                    <h2>Contact</h2>
+                </div>
+                <div class="animate-bar"></div>
+            </div>
+
+            <div class="container">
+                <form name="submit-to-google-sheet">
+                    <div class="title">
+                        <h4>Contact with Us</h4>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="input-data">
+                            <input type="text" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="input-data">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="input-data">
+                        <textarea name="Massage" placeholder="Massage" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn">Submit</button>
+                    </div>
+                </form>
+                <span id="msg"></span>
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="1200">
+                    <div class="title">
+                        <h4>Contact US</h4>
+                    </div>
+                    <div class="subtitle">
+                        <p>
+                            Have questions or need assistance? Feel free to get in touch with us! Our team is here to help.
+                            <br><br /> Reach out through our contact form or email us at <br><br />EVM@gmail.com.<br><br /> We look forward to hearing from you and assisting you on your journey!
+                        </p>
+
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/CTUTrainingSolutions/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/ctu_chatz/status/1264148717038448640"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/ctutrainingsolutions/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+         function opentab(event, tabname) {
+     for (tablink of tablinks) {
+         tablink.classList.remove("active-link");
+     }
+     for (tabcontent of tabcontents) {
+         tabcontent.classList.remove("active-tab");
+     }
+     event.target.classList.add("active-link");
+     document.getElementById(tabname).classList.add("active-tab");
+ }
+
+           
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwPD4yATUJ2zYWkR3aS54as4TyyZqcuXYNiH42lmurBl8lyAN-WDNWBDLyVAF_8Puf6mw/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        msg.innerHTML = "Details Submitted"
+                        setTimeout(function () {
+                            msg.innerHTML = ""
+                        }, 5000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+
+        <!-------------- Jquery Scripts -------------->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+                integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+        <!-------------- AOS Scripts -------------->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <!-------------- Local Script -------------->
+        <script src="~/Content/script.js"></script>
+    </body>
+
+</html> 

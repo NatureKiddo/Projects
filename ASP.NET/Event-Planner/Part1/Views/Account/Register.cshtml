@@ -1,0 +1,122 @@
+﻿@model Event_Manager.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Hide scroll bars */
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover the entire viewport */
+        z-index: -1;
+
+    }
+
+    main {
+        position: relative; /* Add position relative for stacking content over the video */
+        display: ruby-base;
+        flex-direction: initial;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        text-align: center;
+        line-height: 1.5;
+        padding: 50px;
+        color: white;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: white; /* Text color */
+    }
+
+    .row {
+        margin: 10px 0; /* Adjust spacing between form elements */
+    }
+
+    .col-md-10 {
+        position: relative;
+    }
+
+        .col-md-10 img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 30px; /* Adjust image size as needed */
+        }
+
+    .btn {
+        padding: 10px 20px;
+        background-color: blue; /* Button background color */
+        color: white; /* Button text color */
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s; /* Add hover transition */
+    }
+
+        .btn:hover {
+            transform: scale(1.1); /* Enlarge button on hover to 1.1 times its size */
+        }
+
+    a {
+        color: white; /* Link color */
+    }
+
+        a:hover {
+            color: white; /* Link hover color */
+        }
+</style>
+
+
+<video autoplay muted loop>
+    <source src="~/Assets/291976_Record Player Record Stylus Vinyl_By_Janis_Saukums_Artlist_HD.mp4" type="video/mp4"> <!-- Replace with your video file path -->
+</video>
+
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title.</h2>
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Create a new account.</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="row">
+            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="row">
+            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="row">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-md-10">
+                <input type="submit" value="Register" class="btn btn-outline-dark" />
+            </div>
+        </div>
+    }
+</main>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

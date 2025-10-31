@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- Web Ideas -->
+<head>
+    <title>Video Gallery</title>
+
+       <!-------------- Local Stylesheet Link -------------->
+    <link rel="stylesheet" href="~/Content/Videos.css">
+
+      <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+
+</head>
+<body>     
+    
+<div class="container">
+    <div class="heading">Some of Our Projekts and Collaborations </div>
+    <div class="video-container">
+        <div class="video">
+            <iframe width="700" height="315" src="https://www.youtube.com/embed/j_BH9QuC-jo?si=Ujh7KlVM3IiuzEt_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/w3O0-8ibGOQ?si=Unh0jgFr1ZEwZA_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/N8tnM9KyLos?si=Ecuvwu1sPgfJOOFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/c7UikormfBk?si=pDURSLs-SVlObfMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zniBM8mroKU?si=lRmsObBHtJ_GFZjy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OQu28Gjkq04?si=leP88nEO5muW26WX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+    </div>    
+</div>
+
+<script>
+    var video = document.querySelectorAll('video');
+video.forEach(play => play.addEventListener('click', () =>{
+    play.classList.toggle('active')
+    if(play.paused){
+        play.play();
+    }else{
+        play.pause();
+        play.currentTime = 0;
+    }
+}))
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+﻿@model IEnumerable<Event_Manager.Models.Event>
+@{
+    ViewBag.Title = "Event_Lists";
+}
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        color: white;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+
+    main {
+        color: white; /* Change text color to white */
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .table {
+        border: 2px solid #ddd;
+        border-collapse: collapse;
+        margin: 20px 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white; /* Change table text color to white */
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        color: white; /* Change table cell text color to white */
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .btn {
+        border: 2px solid blue;
+        border-radius: 4px;
+        color: white;
+        background-color: blue;
+        padding: 6px 12px;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+        .btn:hover {
+            background-color: darkgreen;
+        }
+
+    .btn-add {
+        border: 2px solid blue;
+        border-radius: 4px;
+        color: white;
+        background-color: blue;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+
+    .promo-box {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .h2 {
+        color: white;
+    }
+</style>
+
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="/Assets/Events bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content-container">
+        <h2>Upcoming Events</h2>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EventName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Location)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EventName) <!-- Display value of BookName property for each book -->
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Location) <!-- Display value of Author property for each book -->
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price) <!-- Display value of Description property for each book -->
+                    </td>
+                    <td>
+                        @Html.ActionLink("Add to Cart", "AddToCart", new { id = item.Id }, new { @class = "btn btn-add" }) <!-- Link to add the book to the shopping cart -->
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+

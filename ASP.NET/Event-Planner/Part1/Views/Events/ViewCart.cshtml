@@ -1,0 +1,265 @@
+﻿@model List<Event_Manager.Models.Cart>
+
+<style>
+    body {
+        background-image: url("/Assets/thankyou_v3.png");
+        background-size: 100%;
+        background-position: center top;
+        background-repeat: no-repeat;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .table {
+        border: 2px solid #ddd;
+        border-collapse: collapse;
+        margin: 20px 0;
+        width: 100%;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7); /* Update the background color to a light dark color */
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        color: white;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .message-box {
+        border: 3px solid #04d9ff;
+        background-color: rgba(0, 0, 0, 0.6); /* Update the background color to a light dark color */
+        padding: 10px;
+        margin: 20px 0;
+    }
+
+
+    .btn {
+        border: 2px solid blue;
+        border-radius: 4px;
+        color: white;
+        background-color: blue;
+        padding: 6px 12px;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .promo-box {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+    /* CSS for the modal popup */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 400px;
+        left: 700px;
+        width: 400px;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.7); /* Transparent background with some opacity */
+        padding: 20px;
+        color: white; /* Text color is white */
+    }
+
+    /* Add some additional styles for the new modal */
+    #purchaseMessage {
+        position: fixed;
+        bottom: 20px; /* Adjust the bottom position */
+        right: 20px; /* Adjust the right position */
+        width: 400px;
+        background-color: rgba(0, 0, 0, 0.7); /* Transparent background with some opacity */
+        padding: 20px;
+        color: white; /* Text color is white */
+        z-index: 999; /* Ensure it's on top of other elements */
+        cursor: move; /* Make it draggable */
+    }
+
+    .modal-content {
+        background-color: transparent; /* Transparent content background */
+        padding: 20px;
+    }
+
+    /* Style the close button (X) in the top right corner */
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    /* Style the input fields and buttons inside the modal */
+    .modal input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .modal .btn {
+        border: 2px solid blue;
+        border-radius: 4px;
+        color: white;
+        background-color: blue;
+        padding: 6px 12px;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    /* Style the modal title */
+    .modal h2 {
+        font-size: 24px;
+    }
+
+    /* Style the final price text */
+    .modal #finalPrice {
+        font-size: 20px;
+    }
+
+    /* Center the modal content */
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+</style>
+
+<h2>Items in Cart</h2>
+
+@if (ViewBag.Message != null)
+{
+
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>Event Name</th>
+            <th>Quantity</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EventName</td> <!-- Display the event name -->
+                <td>@item.Quantity</td> <!-- Display the quantity of the event in the cart -->
+                <td>@Html.ActionLink("Remove", "RemoveFromCart", new { id = item.EventId })</td> <!-- Link to remove the event from the cart -->
+            </tr>
+        }
+
+        <tr>
+            <td colspan="2"><strong>Total Price:</strong></td> <!-- Display the label for the total price -->
+            <td><strong>@ViewBag.TotalPrice</strong></td> <!-- Display the total price stored in the ViewBag -->
+        </tr>
+    </table>
+
+    <div class="promo-box">
+        <h3>Have a Promotion Code?</h3>
+        <p>Enter your code below:</p>
+        <form method="post" action="@Url.Action("ApplyPromoCode")">
+            <input type="text" name="promoCode" placeholder="Enter code">
+            <button type="submit" class="btn">Apply</button>
+        </form>
+    </div>
+    <div>
+        <!-- "Confirm Purchase" button with JavaScript redirection -->
+        <button class="btn" id="confirmPurchase">Confirm Purchase</button>
+    </div>
+
+
+}
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">@ViewBag.Message</div>
+}
+
+@if (ViewBag.TotalPrice != null)
+{
+    <div>Total Price: @ViewBag.TotalPrice</div>
+}
+
+<!-- Add a div for the modal popup -->
+<div id="purchaseModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Confirm Purchase</h2>
+        <p>Final Price: <span id="finalPrice">@ViewBag.TotalPrice</span></p>
+
+        <form>
+            <label for="creditCard">Please enter credit card number:</label>
+            <input type="text" id="creditCard" placeholder="Credit Card Number">
+
+            <label for="csvPin">Please enter CSV pin:</label>
+            <input type="text" id="csvPin" placeholder="CSV Pin">
+
+            <button type="button" id="confirmPurchaseBtn" class="btn">Confirm</button>
+            <button type="button" id="cancelPurchaseBtn" class="btn">Cancel</button>
+        </form>
+    </div>
+</div>
+<div id="purchaseMessage" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeMessage">&times;</span>
+        <h2>Thank you for your purchase</h2>
+        <p>Your ticket will be emailed to you shortly.</p>
+        <p><strong>Details:</strong></p>
+        <p><span id="detailsCreditCard"></span></p>
+        <p><span id="detailsCSV"></span></p>
+    </div>
+</div>
+
+
+<script>
+
+
+    // Add an event listener to the "Confirm Purchase" button
+    document.getElementById("confirmPurchase").addEventListener("click", function () {
+        // Display the modal when the button is clicked
+        document.getElementById("purchaseModal").style.display = "block";
+    });
+
+    // Close the modal when the close button is clicked
+    document.getElementById("closeModal").addEventListener("click", function () {
+        document.getElementById("purchaseModal").style.display = "none";
+    });
+
+    // Close the modal when the "Cancel" button is clicked
+    document.getElementById("cancelPurchaseBtn").addEventListener("click", function () {
+        document.getElementById("purchaseModal").style.display = "none";
+    });
+
+    // Handle the "Confirm" button click
+    document.getElementById("confirmPurchaseBtn").addEventListener("click", function () {
+        // Retrieve the credit card number and CSV pin from the input fields
+        var creditCardNumber = document.getElementById("creditCard").value;
+        var csvPin = document.getElementById("csvPin").value;
+
+        // Display the entered details in the message modal
+        document.getElementById("detailsCreditCard").textContent = "Credit Card Number: " + creditCardNumber;
+        document.getElementById("detailsCSV").textContent = "CSV Pin: " + csvPin;
+
+        // Close the purchase modal
+        document.getElementById("purchaseModal").style.display = "none";
+
+        // Display the message modal
+        document.getElementById("purchaseMessage").style.display = "block";
+    });
+
+    // Close the message modal when the close button is clicked
+    document.getElementById("closeMessage").addEventListener("click", function () {
+        document.getElementById("purchaseMessage").style.display = "none";
+    });
+
+
+</script>
