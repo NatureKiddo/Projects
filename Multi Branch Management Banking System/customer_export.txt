@@ -1,0 +1,65 @@
+====================================================
+     STANDARD BANK — CUSTOMER ACCOUNT SUMMARY
+     Generated: 24/04/2026 08:58
+====================================================
+
+Name          : John Doe
+ID Number     : 1234567891089
+Email         : johndow@gmail.com
+Date of Birth : 29/04/1969
+Account No    : ACC-018105-31328
+Account Type  : Savings
+Branch        : 018105
+Balance       : R4800.00
+Status        : Active
+----------------------------------------------------
+Name          : Jane Doe
+ID Number     : 1234567891081
+Email         : janedoe@gmail.com
+Date of Birth : 25/08/1972
+Account No    : ACC-018105-36637
+Account Type  : Savings
+Branch        : 018105
+Balance       : R4680.00
+Status        : Active
+----------------------------------------------------
+Name          : Abdullah Ibrahim
+ID Number     : 1234567891086
+Email         : abdullahim@gmail.com
+Date of Birth : 09/10/1934
+Account No    : ACC-055034-38560
+Account Type  : Fixed Deposit
+Branch        : 055034
+Balance       : R8500.00
+Status        : Active
+----------------------------------------------------
+Name          : Gregory Nthatisi
+ID Number     : 1234567891083
+Email         : gnthatisi@gmail.com
+Date of Birth : 05/05/1984
+Account No    : ACC-055034-12909
+Account Type  : Cheque
+Branch        : 055034
+Balance       : R8500.00
+Status        : Active
+----------------------------------------------------
+Name          : John Steehuisen
+ID Number     : 1234567891084
+Email         : jsteenhuisen@gmail.com
+Date of Birth : 16/01/1966
+Account No    : ACC-025309-36575
+Account Type  : Cheque
+Branch        : 025309
+Balance       : R24250.00
+Status        : Active
+----------------------------------------------------
+Name          : Eliane Roberts
+ID Number     : 1234567891082
+Email         : eroberts@gmail.com
+Date of Birth : 12/12/2000
+Account No    : ACC-025309-20348
+Account Type  : Student (Zero Fees)
+Branch        : 025309
+Balance       : R810.00
+Status        : Active
+----------------------------------------------------
