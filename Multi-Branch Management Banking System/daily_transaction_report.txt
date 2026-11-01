@@ -1,0 +1,7 @@
+
+========== Daily Transaction Report ==========
+Branch : 018105
+Date   : 24/04/2026
+Total In: R9730.00
+Total Out: R250.00
+Net: R9480.00
