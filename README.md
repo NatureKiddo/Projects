@@ -1,2 +1,2 @@
 # Projects
-These are projects I've done over the years is to help me understand more and to gain a bit of experience.  
+I have dived into various projects and various programming languages. These are the projects I have done and are completed. BY doing these project, it has helps gained and understanding of how different each language is. Different ways to approach the programming languages as I attempted to complete the task/projects which was handed to me. All of these projects have given me different experiences on its own, which I am grateful. Plenty of tough projects because when I started with them I had no prior knowledge. I was walking in a blank room. Now that I have completed the projects, I gain more knowledge bit-by-bit.
